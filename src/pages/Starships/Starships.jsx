@@ -12,7 +12,7 @@ const Starships = () => {
 
   return (
     <>
-      <div className='icon-conatiner'>
+      <div className='icon-container'>
         {starships.map(starship =>
           <Link
             to='/starship'
