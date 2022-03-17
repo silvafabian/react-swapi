@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const StarshipPage = (props) => {
   const [shipDetails, setShipDetails] = useState({})
   let location = useLocation()
-  console.log(location)
+
 
   useEffect(() => {
     getDetails(location.state.starship.url)
