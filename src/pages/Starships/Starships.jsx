@@ -14,11 +14,17 @@ const Starships = (props) => {
   return (
     <>
       <h2>All Starships</h2>
-      <div>
+      <div className='icon-conatiner'>
         {starships.map(starship =>
-          <div>
-            {starship.name}
-          </div>
+        <Link
+          to='/starship'
+          state={{starship}}
+          key={starship.name}
+        >
+        <div id='classDiv'>
+          {starship.name}
+        </div>
+      </Link>
         )}
       </div>
     </>
