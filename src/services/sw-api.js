@@ -1,6 +1,6 @@
 const baseUrl = 'https://swapi.dev/api/'
 
-export function getAllStarships () {
+export function getAllStarships() {
   return fetch (`${baseUrl}starships/`)
   .then(res => res.json())
 }

@@ -3,8 +3,25 @@ import { getAllStarships } from '../../services/sw-api';
 import { Link } from 'react-router-dom'
 
 const Starships = (props) => {
+  const [starships, setStarships] = useState([])
+
+  useEffect(() => {
+    getAllStarships()
+    .then(starshipName => setStarships(starshipName.results))
+  }, [])
+  console.log(starships)
+
   return (
-    <h3>All Starships</h3>
+    <>
+      <h2>All Starships</h2>
+      <div>
+        {starships.map(starship =>
+          <div>
+            {starship.name}
+          </div>
+        )}
+      </div>
+    </>
   );
 }
 
