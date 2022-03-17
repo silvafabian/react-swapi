@@ -1,11 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import Starships from './pages/Starships/Starships';
+
 
 function App() {
   return (
-    <div className="App">
-      <h2>Star wars</h2>
-    </div>
+    <>
+      <h1>STAR WARS ENTERPRISE</h1>
+      <Starships />
+    </>
   );
 }
 
